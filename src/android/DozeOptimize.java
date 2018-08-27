@@ -47,7 +47,7 @@ public class DozeOptimize extends CordovaPlugin {
 					}
 					else
 					{
-						message = "not ingnoring";
+						message = "not ignoring";
 					}		
 					callbackContext.success(message);
 					return true;

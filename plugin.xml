@@ -13,4 +13,4 @@
 		<uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
 	</config-file>
 	
-	<source-file src="src/android/DozeOptimize.java" target-dir="src/cordova/plugins/dozeOptimize/dozeOptimize" /></platform></plugin>
+	<source-file src="src/android/DozeOptimize.java" target-dir="src/cordova/plugins/DozeOptimize/DozeOptimize" /></platform></plugin>
