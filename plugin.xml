@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin id="cordova.plugins.doze-optimize" version="0.1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android"><name>doze-optimize</name>
 <js-module name="DozeOptimize" src="www/DozeOptimize.js">
-	<clobbers target="cordova.plugins.doze-optimize" />
+	<clobbers target="cordova.plugins.DozeOptimize" />
 </js-module>
 <platform name="android">
 	<config-file parent="/*" target="res/xml/config.xml">
