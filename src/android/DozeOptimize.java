@@ -69,9 +69,11 @@ public class DozeOptimize extends CordovaPlugin {
 				if (Build.VERSION.SDK_INT>Build.VERSION_CODES.LOLLIPOP_MR1) {
 					
 					String message ="Optimizations Requested Successfully";
-					Intent myIntent = new Intent();
-					myIntent.setAction(Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS);
-					startActivity(myIntent);
+					Context context = cordova.getActivity().getApplicationContext();
+
+					Intent intent = new Intent();
+					intent.setAction(Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS);
+					context.startActivity(intent);
 							
 					callbackContext.success(message);
 					return true;
