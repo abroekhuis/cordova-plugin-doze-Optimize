@@ -38,18 +38,18 @@ public class DozeOptimize extends CordovaPlugin {
 				
 				if (Build.VERSION.SDK_INT>Build.VERSION_CODES.LOLLIPOP_MR1) {
 					
-					Boolean success = false;
+					String message = "";
 					Context context = cordova.getActivity().getApplicationContext();
 					String packageName = context.getPackageName();
 					PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
 					if (pm.isIgnoringBatteryOptimizations(packageName)) {
-						success = true;
+						message = "ignoring";
 					}
 					else
 					{
-						success = false;
+						message = "not ingnoring";
 					}		
-					callbackContext.success(success);
+					callbackContext.success(message);
 					return true;
 				}
 				else
