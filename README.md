@@ -47,6 +47,16 @@ Sample Code to Popup ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS to whitelist yo
             });
 ```
 
+Sample Code to Popup ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS to whitelist your app.
+
+```
+ cordova.plugins.DozeOptimize.RequestOptimizationsSettings(function (responce){
+              console.log(responce); // Will give "Optimizations Requested Successfully"
+            }, function (error){
+            console.error("BatteryOptimizationsSettings Request Error"+error);			
+            });
+```
+
 Full Code of usage with step one and two
 
 ```
