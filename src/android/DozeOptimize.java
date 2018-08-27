@@ -69,14 +69,9 @@ public class DozeOptimize extends CordovaPlugin {
 				if (Build.VERSION.SDK_INT>Build.VERSION_CODES.LOLLIPOP_MR1) {
 					
 					String message ="Optimizations Requested Successfully";
-					Context context = cordova.getActivity().getApplicationContext();
-					String packageName = context.getPackageName();
-					
-					Intent intent = new Intent();
-					intent.setAction(Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS);
-					intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-					intent.setData(Uri.parse("package:" + packageName));
-					context.startActivity(intent);		
+					Intent myIntent = new Intent();
+					myIntent.setAction(Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS);
+					startActivity(myIntent);
 							
 					callbackContext.success(message);
 					return true;
@@ -87,7 +82,7 @@ public class DozeOptimize extends CordovaPlugin {
 					return false;
 				}
             } catch (Exception e) {
-                callbackContext.error("N/A");
+                callbackContext.error(e.getMessage());
                 return false;
             }
         }
