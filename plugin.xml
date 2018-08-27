@@ -5,12 +5,12 @@
 </js-module>
 <platform name="android">
 	<config-file parent="/*" target="res/xml/config.xml">
-		<feature name="doze-optimize">
-			<param name="android-package" value="cordova.plugins.doze-optimize.doze-optimize" />
+		<feature name="DozeOptimize">
+			<param name="android-package" value="cordova.plugins.DozeOptimize.DozeOptimize" />
 		</feature>
 	</config-file>
 	<config-file parent="/*" target="AndroidManifest.xml">
 		<uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
 	</config-file>
 	
-	<source-file src="src/android/DozeOptimize.java" target-dir="src/cordova/plugins/doze-optimize/doze-optimize" /></platform></plugin>
+	<source-file src="src/android/DozeOptimize.java" target-dir="src/cordova/plugins/dozeOptimize/dozeOptimize" /></platform></plugin>
